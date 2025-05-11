@@ -8,7 +8,7 @@ def ScanHost(tarHost, tarPort):
     except:
         print('[-]%d/tcp closed'% tarPort)
 
-def ScanPort(tarHost, tgtPorts):
+def ScanPort(tarHost, tarPorts):
     try:
         tarIP = gethostbyname(tarHost)
     except:
@@ -21,9 +21,9 @@ def ScanPort(tarHost, tgtPorts):
     except:
         print('\n[+] Scan result of: %s ' % tarIP)
     setdefaulttimeout(1)
-    for tarPort in tgtPorts:
+    for tarPort in tarPorts:
         print('Scanning Port: %d'% tarPort)
         ScanHost(tarHost, int(tarPort))
 
 if __name__=='__main__':
-    ScanPort('hbcg.vn', [80, 10051])
+    ScanPort('171.247.184.37', [80, 10051])
