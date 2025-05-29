@@ -16,6 +16,6 @@ def bruteForceLogin(hostname, passwordFile):
         pass
 
 if __name__== '__main__':
-    hostName = "123"
+    hostName = "127.0.0.1"
     passwordFile = 'credentials.txt'
     bruteForceLogin(hostName, passwordFile)
